@@ -1,7 +1,7 @@
 <!-- Use If statement to check if data exists -->
 <!-- <p *ngIf="!results">Please enter some values and press "Calculate".</p> -->
 
-@if (!results()){
+@if (!results){
 <p class="center">Please enter some values and press "Calculate".</p>
 } @else {
 <table>
@@ -16,7 +16,7 @@
   </thead>
   <tbody>
     <!-- Use for Loop here -->
-    @for (result of results(); track result.year){
+    @for (result of results; track result.year){
     <tr>
       <td>{{ result.year }}</td>
       <td>{{ result.valueEndOfYear | currency }}</td>
